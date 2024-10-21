@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+}
+
+.btn-primary {
+    background-color: #a71d2a; 
+    border-color: #a71d2a; 
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #801823; 
+    border-color: #801823; 
+}
+
+/* Navbar Styles */
+.navbar {
+/*    background-color: rgba(255, 255, 255, 0.9); */
+    padding: 1rem 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color:#fac564; 
+/*    style="background-image:url('images/bg_3.jpg');"*/
+}
+
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    height: 40px; 
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    margin-left: 25px; 
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #a71d2a;
+}
+
+/* Banner Section */
+.banner-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('banner.jpg') center center no-repeat; 
+    background-size: cover;
+    color: white;
+    min-height: 700px; 
+    display: flex;
+    align-items: center;
+}
+
+.banner-content {
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 4em; 
+    margin-bottom: 1rem; 
+}
+
+.banner-content p.lead {
+    font-size: 1.5em; 
+    margin-bottom: 2rem; 
+}
+
+/* About Section */
+#about .animate-image {
+    transition: transform 0.3s ease;
+}
+
+#about .animate-image:hover {
+    transform: scale(1.05); 
+}
+
+/* Special Dishes Section */
+#specials .card {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+#specials .card:hover {
+    transform: translateY(-5px); 
+}
+
+#specials img {
+    height: 200px;
+    object-fit: cover; 
+}
+.image-frame {
+    border: 5px solid #ccc; /* Light grey border for the frame */
+    padding: 10px; /* Space between the image and the border */
+    background-color: white; /* Background for the frame */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: inline-block; /* Ensures the frame fits around the image */
+}
+
+
+/* Footer Styles */
+footer a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #c82333; 
+}
+
+.social-icons a {
+    color: white; 
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+    opacity: 1; 
+}
+
+/* Animation Classes */
+.animate-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-text.show { 
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-text.delay-1 { 
+    transition-delay: 0.2s; 
+}
+
+.animate-button {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-button:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.animate-image {
+    opacity: 0;
+    transform: translateX(-20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-image.show { 
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Media Queries - Responsive Design */
+@media (max-width: 768px) {
+    /* ... Adjust for smaller screens ... */
+    .banner-content h1 {
+        font-size: 3em;
+    }
+    .banner-content p.lead {
+        font-size: 1.2em;
+    }
+    #about .row {
+        flex-direction: column-reverse;
+    }
+}
+/* ... Other Navbar Styles ... */
+
+.navbar-nav { 
+    display: flex; /* Enable flexbox for the navbar list */
+    align-items: center; /* Vertically align items to the center */
+    justify-content: center; /* Distribute space around items to center them horizontally */
+    width: 100%; /* Optional: Ensure navbar items occupy full width for centering */
+}
+
+/* ... Optional Styling Enhancements ... */ 
+.navbar-nav .nav-link {
+    padding: 10px 20px; /* Add some padding around the links */
+    border-radius: 5px; /* Optional: Rounded corners for the links */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: rgba(200, 35, 51, 0.1); /* Subtle background on hover/active */
+    transform: translateY(-2px); /* Optional: Slight lift on hover */
+}
+/* ... Other Styles ... */
+
+/* About Page Banner Styles */
+.about-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('about-banner.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    min-height: 400px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    position: relative; /* To position the overlay */
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust overlay opacity */
+}
+
+.banner-content {
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5rem;
+}
+
+/* About Content Styling */
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+.about-content img {
+    margin-bottom: 1rem;
+}
+
+/* ... Media Queries for Responsiveness (if needed) ... */
+/* ... Your Existing Styles ... */
+
+/* Outlets Page Banner Styles */
+.outlets-banner { 
+    /* ... (Same styles as about-banner, adjust background image) ... */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('outlets-banner.jpg') center center no-repeat;
+}
+
+/* Outlets Content Styling */
+.outlets-content .card {
+    /* ... (Apply card styles as needed) ... */
+}
