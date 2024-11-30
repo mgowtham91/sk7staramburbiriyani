@@ -12,7 +12,14 @@
        border-radius: 5px;
         border: 1px solid;
         background:#c4261b;
-        color: #fff;}</style>
+        color: #fff;}
+    .custom-card-image {
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio and fills the space */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+    </style>
 </head>
 <body>
 
@@ -56,7 +63,7 @@
         <!-- Example of a shop card -->
         <div class="col-md-4">
     <div class="card">
-        <img src="images/Mugapair.jpg" class="card-img-top" alt="Shop Image">
+        <img src="images/Mugapair.jpg" class="card-img-top custom-card-image" alt="Shop Image">
         <div class="card-body" style="text-align:center;">
             <h5 class="card-title">Shop Name 1</h5>
             <p class="card-text">Chennai</p>
