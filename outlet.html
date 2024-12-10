@@ -19,6 +19,10 @@
     object-fit: cover; /* Ensure the image fits nicely */
     border-top-left-radius: 5px; /* Match card border radius */
     border-top-right-radius: 5px; /* Match card border radius */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+        .card:hover .card-img-top {
+    transform: scale(1.1); /* Zoom in the image */
 }
     </style>
 </head>
